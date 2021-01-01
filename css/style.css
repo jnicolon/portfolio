@@ -95,6 +95,10 @@
   font-weight: 500;
 }
 
+.nav-btns {
+  margin-left: 10px;
+}
+
 .content-container {
   position: relative;
   width: 100%;
