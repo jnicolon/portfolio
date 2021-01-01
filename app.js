@@ -1,23 +1,24 @@
 //Nav Bar//
 
-// const navbar = document.getElementById('nav-bar');
+const navbar = document.getElementById('nav-bar');
 
-// const navbarYpos = navbar.offsetHeight;
-
-// function displayNavBar() {
-//     if (window.pageYOffset > 150) {
-//         navbar.style.display = 'block';
-//         navbar.style.opacity = '1';
-//     } else {
-//         navbar.style.opacity = '0';
+const navbarYpos = navbar.offsetHeight;
 
 
-//         navbar.style.display = 'none';
-//     }
-//     console.log("scroll") 
-// }
+function displayNavBar() {
+    if (window.pageYOffset > 150) {
+        
+        navbar.style.boxShadow = '0px 0px 20px rgba(0,0,0,0.90)';
+    } else {
+        navbar.style.boxShadow = ''
 
-// window.addEventListener('scroll', displayNavBar);
+
+        
+    }
+    console.log("scroll") 
+}
+
+window.addEventListener('scroll', displayNavBar);
 
 //Subtitle//
 

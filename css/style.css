@@ -26,7 +26,7 @@
 
 .nav-center-container {
   position: relative;
-  height: 50px;
+  height: 100%;
   width: 100%;
   max-width: 1400px;
   margin: auto;
@@ -43,7 +43,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0px 30px;
+  padding: 0px 50px;
 }
 
 .nav-left {
@@ -92,11 +92,12 @@
   text-transform: capitalize;
   color: #e9e9e9;
   font-size: 0.9rem;
+  font-weight: 500;
 }
 
 .content-container {
-  position: absolute;
-  width: 100vw;
+  position: relative;
+  width: 100%;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -112,11 +113,9 @@
       -ms-flex-align: center;
           align-items: center;
   z-index: 1;
-  position: absolute;
 }
 
 .intro-container {
-  width: 100%;
   height: 100vh;
   position: relative;
   display: -webkit-box;
@@ -223,6 +222,25 @@
   cursor: default;
 }
 
+.logo-containers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  top: -10px;
+}
+
+.svg-logos {
+  fill: #e9e9e9;
+  width: 30px;
+  height: 30px;
+  margin: 0px 3px;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -237,10 +255,12 @@ a {
 
 body {
   background-color: #0a0a0a;
+  margin: 0;
+  padding: 0;
 }
 
 .main-container {
   margin: auto;
-  position: absolute;
+  position: relative;
 }
 /*# sourceMappingURL=style.css.map */

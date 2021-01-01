@@ -47,3 +47,16 @@
   z-index: 400;
   cursor: default;
 }
+
+.logo-containers {
+  @include flex-row;
+  position: relative;
+  top: -10px;
+}
+
+.svg-logos {
+  fill: $text-color;
+  width: 30px;
+  height: 30px;
+  margin: 0px 3px;
+}
