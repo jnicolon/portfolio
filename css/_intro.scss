@@ -1,0 +1,49 @@
+.intro-content-container {
+  position: relative;
+  width: 600px;
+  @include flex-column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-title {
+  @include font-nav;
+  font-size: 4rem;
+  cursor: default;
+}
+
+.subtitle-container {
+  position: relative;
+}
+
+.subtitle-txt-container {
+  position: relative;
+}
+
+.content-subtitle {
+  @include font-nav;
+  position: relative;
+  cursor: default;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+#subtitle-english {
+  display: block;
+  opacity: 1;
+}
+
+#subtitle-spanish {
+  position: relative;
+  top: -36px;
+  display: block;
+  opacity: 0;
+}
+
+#tilde {
+  @include font-nav;
+  font-size: 4rem;
+  position: fixed;
+  z-index: 400;
+  cursor: default;
+}

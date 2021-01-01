@@ -1,0 +1,28 @@
+$text-color: #e9e9e9;
+$primary-color: #043cac;
+$secondary-color: #5880ca;
+$terciary-color: #d3a615;
+$extra-color: #7c3d04;
+$black: rgb(10, 10, 10);
+$menu-padding: 3px;
+
+$font-montserrat: "Montserrat", sans-serif;
+$font-alamari: "Almarai", sans-serif;
+$font-roboto: "Roboto", sans-serif;
+$font-poppins: "Poppins", sans-serif;
+
+@mixin font-nav {
+  font-family: $font-poppins;
+  text-transform: capitalize;
+  color: $text-color;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,48 @@
+.nav-container {
+  width: 100vw;
+  height: 60px;
+  @include flex-row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  background-color: $black;
+  opacity: 1;
+  display: block;
+  transition: opacity 0.3s;
+}
+
+.nav-center-container {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  @include flex-row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 30px;
+}
+
+.nav-left {
+  height: 40px;
+  @include flex-row;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    @include font-nav;
+    font-size: 1.1rem;
+  }
+}
+
+.nav-right {
+  height: 40px;
+  @include flex-row;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    @include font-nav;
+    font-size: 0.9rem;
+  }
+}
