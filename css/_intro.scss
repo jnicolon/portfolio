@@ -6,6 +6,16 @@
   align-items: center;
 }
 
+.intro-center-container {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  @include flex-column;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 1;
+}
+
 .content-title {
   @include font-nav;
   font-size: 4rem;
@@ -59,4 +69,26 @@
   width: 30px;
   height: 30px;
   margin: 0px 3px;
+}
+
+.intro-down-container {
+  @include flex-column;
+  justify-content: flex-end;
+  align-items: center;
+  color: $text-color;
+}
+
+.down-container {
+  @include flex-column;
+  justify-content: center;
+  align-items: center;
+}
+
+.down-txt {
+  font-family: $font-poppins;
+  font-size: 0.7rem;
+}
+
+.down-arrow {
+  width: 40px;
 }
