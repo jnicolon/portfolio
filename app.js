@@ -10,12 +10,9 @@ function displayNavBar() {
         
         navbar.style.boxShadow = '0px 0px 20px rgba(0,0,0,0.90)';
     } else {
-        navbar.style.boxShadow = ''
-
-
-        
+        navbar.style.boxShadow = ''    
     }
-    console.log("scroll") 
+    
 }
 
 window.addEventListener('scroll', displayNavBar);
@@ -107,3 +104,13 @@ contentTitle.addEventListener('mouseleave', ()=>{
     moveTildeInterval = setInterval(moveTilde, 5);
     hideSubtitle();
 });
+
+
+//Down arrow
+
+const downArrow = document.getElementById('down-arrow')
+document.addEventListener('DOMContentLoaded', ()=>{
+    gsap.to('.down-arrow',{duration:0.75, y:10, yoyo:true, repeat:-1, delay:1, ease:'power1.inOut'})
+
+}, false);
+

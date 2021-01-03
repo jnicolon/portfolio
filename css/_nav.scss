@@ -17,12 +17,12 @@
   position: relative;
   height: 100%;
   width: 100%;
-  max-width: 1400px;
+  max-width: $max-width;
   margin: auto;
   @include flex-row;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 50px;
+  padding: 0px $max-width-padding;
 }
 
 .nav-left {
