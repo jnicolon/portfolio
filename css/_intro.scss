@@ -93,3 +93,12 @@
   width: 40px;
   margin-top: 3px;
 }
+
+@media only screen and (max-width: 375px) {
+  .content-title {
+    font-size: 2.8rem;
+  }
+  #tilde {
+    display: none;
+  }
+}

@@ -99,6 +99,25 @@
   margin-left: 10px;
 }
 
+.menu-mobile-btn {
+  color: white;
+  width: 50px;
+  height: 50px;
+  display: none;
+}
+
+@media only screen and (max-width: 375px) {
+  .nav-center-container {
+    padding: 0px 15px;
+  }
+  .nav-right h2 {
+    display: none;
+  }
+  .menu-mobile-btn {
+    display: block;
+  }
+}
+
 .content-container {
   position: relative;
   width: 100%;
@@ -136,7 +155,7 @@
   padding-bottom: 30px;
 }
 
-.about-container {
+.timeline-container {
   width: 100%;
   position: relative;
   display: -webkit-box;
@@ -305,6 +324,15 @@
   margin-top: 3px;
 }
 
+@media only screen and (max-width: 375px) {
+  .content-title {
+    font-size: 2.8rem;
+  }
+  #tilde {
+    display: none;
+  }
+}
+
 .january-container {
   background-color: #6bc4ca;
   width: 100%;
@@ -346,7 +374,7 @@
   padding: 0px 50px;
 }
 
-.about-title {
+.timeline-title {
   font-size: 4rem;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
@@ -361,6 +389,18 @@
   display: grid;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
+}
+
+@media only screen and (max-width: 375px) {
+  .timeline-title {
+    font-size: 2.5rem;
+  }
+  .january-content-container {
+    padding: 0px 15px;
+  }
+  .january-container {
+    height: 100%;
+  }
 }
 
 .card-horizontal {
