@@ -33,21 +33,18 @@ function hideSubtitle(){
     subtitleSpanish.style.opacity = "0";
 }
 
-//card background
+//Card background
 
 const cardBackgroundAll = document.querySelectorAll('.card-background');
-const card = document.querySelector('.card')
 
 function changeCardBackgroundDimensions(){
-    
     cardBackgroundAll.forEach(cardBackground=>{
-    const cardRect = card.getBoundingClientRect()
+    let cardRect = cardBackground.parentElement.getBoundingClientRect()
     cardBackground.style.width = `${cardRect.width}px`;
     cardBackground.style.height = `${cardRect.height}px`;
     })   
 }
 
-changeCardBackgroundDimensions();
 
 //Title//
 
@@ -126,6 +123,6 @@ contentTitle.addEventListener('mouseleave', ()=>{
 const downArrow = document.getElementById('down-arrow')
 document.addEventListener('DOMContentLoaded', ()=>{
     gsap.to('.down-arrow',{duration:0.75, y:10, yoyo:true, repeat:-1, delay:1, ease:'power1.inOut'})
-
+    changeCardBackgroundDimensions();
 }, false);
 

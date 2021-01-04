@@ -4,6 +4,10 @@
   margin: 20px;
 }
 
+.card-vertical {
+  width: 300px;
+}
+
 .card-horizontal {
   max-width: 800px;
   width: 300px;
@@ -84,5 +88,21 @@
   .card-img {
     height: 100%;
     object-position: center;
+  }
+
+  .card-vertical {
+    width: 300px;
+  }
+  .card-container-vertical {
+    flex-direction: column;
+    height: 65vh;
+  }
+  .photo-container-vertical {
+    width: 100%;
+    margin: 10px 0px;
+  }
+
+  .text-container-vertical {
+    margin: 0px;
   }
 }
