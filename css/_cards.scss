@@ -4,6 +4,11 @@
   margin: 20px;
 }
 
+.card-content-vertical-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .card-vertical {
   width: 300px;
 }
@@ -104,5 +109,9 @@
 
   .text-container-vertical {
     margin: 0px;
+  }
+  .card-content-vertical-container {
+    display: flex;
+    flex-direction: row;
   }
 }
