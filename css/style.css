@@ -411,6 +411,7 @@
 .card {
   position: relative;
   background-color: white;
+  margin: 20px;
 }
 
 .card-horizontal {
@@ -444,7 +445,7 @@
 
 .text-container {
   width: 100%;
-  margin: 0px 5px;
+  margin-bottom: 15px;
 }
 
 .card-title {
@@ -455,6 +456,7 @@
   width: -moz-fit-content;
   width: fit-content;
   padding: 0px 5px;
+  margin-bottom: 10px;
 }
 
 .card-txt {
@@ -465,7 +467,6 @@
 
 .photo-container {
   width: 100%;
-  margin: 0px 10px;
 }
 
 .card-img {
@@ -491,13 +492,13 @@
     width: 800px;
     height: 300px;
   }
-  .left-container {
-    margin-right: 15px;
+  .text-container {
+    margin: 0px 10px;
   }
-  .right-container {
+  .photo-container {
     height: 100%;
     width: 650px;
-    margin-top: 0px;
+    margin: 0px 10px;
   }
   .card-img {
     height: 100%;
