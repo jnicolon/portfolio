@@ -1,6 +1,9 @@
 .card {
   position: relative;
   background-color: white;
+}
+
+.card-horizontal {
   max-width: 800px;
   width: 300px;
 }
@@ -24,8 +27,9 @@
   z-index: 1;
 }
 
-.left-container {
+.text-container {
   width: 100%;
+  margin: 0px 5px;
 }
 
 .card-title {
@@ -37,15 +41,14 @@
 }
 
 .card-txt {
-  margin-top: 15px;
   font-family: $font-roboto;
   font-size: 1rem;
   text-align: justify;
 }
 
-.right-container {
+.photo-container {
   width: 100%;
-  margin-top: 15px;
+  margin: 0px 10px;
 }
 
 .card-img {

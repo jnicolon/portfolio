@@ -11,10 +11,11 @@
 
 .month-content-container {
   position: relative;
+  display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  margin: auto;
+  height: 100%;
 }
 
 .month-title {
