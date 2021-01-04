@@ -354,6 +354,7 @@
 }
 
 .month-container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -368,10 +369,11 @@
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  padding: 20px;
+  padding: 35px;
 }
 
 .month-content-container {
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -402,9 +404,15 @@
   }
 }
 
-.card-container {
+.card {
+  position: relative;
+  background-color: white;
   max-width: 800px;
-  min-width: 325px;
+  width: 300px;
+}
+
+.card-container {
+  position: relative;
   background-color: white;
   margin-top: 10px;
   padding: 15px;
@@ -415,6 +423,16 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 2;
+}
+
+.card-background {
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  top: 15px;
+  left: -15px;
+  z-index: 1;
 }
 
 .left-container {
@@ -452,11 +470,18 @@
 }
 
 @media only screen and (min-width: 600px) {
+  .card {
+    width: 100%;
+  }
   .card-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    height: 300px;
+  }
+  .card-background {
+    width: 800px;
     height: 300px;
   }
   .left-container {

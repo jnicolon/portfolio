@@ -1,13 +1,15 @@
 .month-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  padding: 20px;
+  padding: 35px;
 }
 
 .month-content-container {
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;

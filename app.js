@@ -33,6 +33,18 @@ function hideSubtitle(){
     subtitleSpanish.style.opacity = "0";
 }
 
+//card background
+
+const cardBackground = document.querySelector('.card-background');
+const card = document.querySelector('.card')
+
+function changeCardBackgroundDimensions(){
+    const cardRect = card.getBoundingClientRect()
+    cardBackground.style.width = `${cardRect.width}px`;
+    cardBackground.style.height = `${cardRect.height}px`;
+    console.log(cardRect, card, cardBackground)  
+}
+
 //Title//
 
 const contentTitle = document.querySelector('.content-title');
@@ -45,6 +57,7 @@ let bottom = titleContainer.getBoundingClientRect().bottom;
 window.addEventListener('resize', ()=>{
     titleRect = contentTitle.getBoundingClientRect();
     bottom = titleContainer.getBoundingClientRect().bottom;
+    changeCardBackgroundDimensions()
 })
 window.addEventListener('scroll', ()=>{
     titleRect = contentTitle.getBoundingClientRect();
