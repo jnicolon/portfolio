@@ -9,8 +9,8 @@ $color-july: #b65d87;
 $color-august: #38282c;
 $color-november: #f4d60d;
 $color-devember: #2a2b39;
-$color-january: #517ac0;
-$color-february: #dfc7c3;
+$color-january2: #517ac0;
+$color-february2: #dfc7c3;
 
 $menu-padding: 3px;
 $max-width: 1400px;
@@ -38,4 +38,20 @@ $text-paragraph: $font-openSans;
 @mixin flex-column {
   display: flex;
   flex-direction: column;
+}
+
+.january {
+  background-color: $color-january;
+}
+.april {
+  background-color: $color-april;
+}
+.may {
+  background-color: $color-may;
+}
+.june {
+  background-color: $color-june;
+}
+.july {
+  background-color: $color-july;
 }
