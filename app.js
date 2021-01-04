@@ -45,6 +45,8 @@ function changeCardBackgroundDimensions(){
     })   
 }
 
+changeCardBackgroundDimensions()
+
 
 //Title//
 
