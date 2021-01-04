@@ -35,15 +35,19 @@ function hideSubtitle(){
 
 //card background
 
-const cardBackground = document.querySelector('.card-background');
+const cardBackgroundAll = document.querySelectorAll('.card-background');
 const card = document.querySelector('.card')
 
 function changeCardBackgroundDimensions(){
+    
+    cardBackgroundAll.forEach(cardBackground=>{
     const cardRect = card.getBoundingClientRect()
     cardBackground.style.width = `${cardRect.width}px`;
     cardBackground.style.height = `${cardRect.height}px`;
-    console.log(cardRect, card, cardBackground)  
+    })   
 }
+
+changeCardBackgroundDimensions();
 
 //Title//
 
