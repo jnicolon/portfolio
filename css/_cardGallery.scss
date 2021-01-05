@@ -1,0 +1,19 @@
+.card-gallery-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(214, 127, 14);
+  overflow: hidden;
+}
+.card-gallery-images-container {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.card-gallery-image {
+  width: 300px;
+  height: 300px;
+}

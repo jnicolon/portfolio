@@ -128,3 +128,26 @@ document.addEventListener('DOMContentLoaded', ()=>{
     changeCardBackgroundDimensions();
 }, false);
 
+
+
+//Card Gallery
+
+
+const slidesContainer = document.getElementById('all-slides');
+const allSlides = document.querySelectorAll('.card-gallery-image');
+let currentIndex = 0;
+function moveSlideRight(){
+    
+    
+    if (currentIndex === allSlides.length-1){
+        currentIndex = 1;
+        gsap.set('#all-slides', {x:0});
+    } else {
+        currentIndex = currentIndex + 1
+    }
+   
+    gsap.to('#all-slides', {duration: 1, x:currentIndex * -300})
+    console.log(currentIndex)
+}
+
+window.setInterval(moveSlideRight, 2000)
