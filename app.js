@@ -141,13 +141,12 @@ function moveSlideRight(){
     
     if (currentIndex === allSlides.length-1){
         currentIndex = 1;
+        gsap.to('#all-slides', {duration: 1, x:currentIndex * -300})
         gsap.set('#all-slides', {x:0});
     } else {
         currentIndex = currentIndex + 1
+        gsap.to('#all-slides', {duration: 1, x:currentIndex * -300})
     }
-   
-    gsap.to('#all-slides', {duration: 1, x:currentIndex * -300})
-    console.log(currentIndex)
 }
 
 window.setInterval(moveSlideRight, 2000)
