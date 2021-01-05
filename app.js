@@ -1,23 +1,19 @@
 //Nav Bar//
 
-// const navbar = document.getElementById('nav-bar');
+const navbar = document.getElementById('nav-bar');
 
-// const navbarYpos = navbar.offsetHeight;
-
-// function displayNavBar() {
-//     if (window.pageYOffset > 150) {
-//         navbar.style.display = 'block';
-//         navbar.style.opacity = '1';
-//     } else {
-//         navbar.style.opacity = '0';
+const navbarYpos = navbar.offsetHeight;
 
 
-//         navbar.style.display = 'none';
-//     }
-//     console.log("scroll") 
-// }
+function displayNavBar() {
+    if (window.pageYOffset > 150) {
+        navbar.style.boxShadow = '0px 0px 20px rgba(0,0,0,0.90)';
+    } else {
+        navbar.style.boxShadow = ''    
+    }
+}
 
-// window.addEventListener('scroll', displayNavBar);
+window.addEventListener('scroll', displayNavBar);
 
 //Subtitle//
 
@@ -37,6 +33,21 @@ function hideSubtitle(){
     subtitleSpanish.style.opacity = "0";
 }
 
+//Card background
+
+const cardBackgroundAll = document.querySelectorAll('.card-background');
+
+function changeCardBackgroundDimensions(){
+    cardBackgroundAll.forEach(cardBackground=>{
+    let cardRect = cardBackground.parentElement.getBoundingClientRect()
+    cardBackground.style.width = `${cardRect.width}px`;
+    cardBackground.style.height = `${cardRect.height}px`;
+    })   
+}
+
+changeCardBackgroundDimensions()
+
+
 //Title//
 
 const contentTitle = document.querySelector('.content-title');
@@ -49,6 +60,7 @@ let bottom = titleContainer.getBoundingClientRect().bottom;
 window.addEventListener('resize', ()=>{
     titleRect = contentTitle.getBoundingClientRect();
     bottom = titleContainer.getBoundingClientRect().bottom;
+    changeCardBackgroundDimensions()
 })
 window.addEventListener('scroll', ()=>{
     titleRect = contentTitle.getBoundingClientRect();
@@ -106,3 +118,13 @@ contentTitle.addEventListener('mouseleave', ()=>{
     moveTildeInterval = setInterval(moveTilde, 5);
     hideSubtitle();
 });
+
+
+//Down arrow
+
+const downArrow = document.getElementById('down-arrow')
+document.addEventListener('DOMContentLoaded', ()=>{
+    gsap.to('.down-arrow',{duration:0.75, y:10, yoyo:true, repeat:-1, delay:1, ease:'power1.inOut'})
+    changeCardBackgroundDimensions();
+}, false);
+

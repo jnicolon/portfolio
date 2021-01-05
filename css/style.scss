@@ -2,6 +2,11 @@
 @import "./nav";
 @import "./content";
 @import "./intro";
+@import "./timeline";
+@import "./cards";
+@import "./cardSquare";
+@import "./cardHorizontal";
+@import "./cardVertical";
 
 * {
   margin: 0px;
@@ -16,9 +21,11 @@ a {
 
 body {
   background-color: $black;
+  margin: 0;
+  padding: 0;
 }
 
 .main-container {
   margin: auto;
-  position: absolute;
+  position: relative;
 }
