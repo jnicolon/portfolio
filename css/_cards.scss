@@ -12,6 +12,7 @@
 
 .text-container {
   width: 100%;
+
   margin-bottom: 15px;
 }
 
@@ -19,6 +20,22 @@
   width: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.card-title {
+  color: white;
+  font-family: $font-poppins;
+  font-size: 1.5rem;
+  width: fit-content;
+  padding: 0px 5px;
+  margin-bottom: 15px;
+}
+
+.card-txt {
+  font-family: $font-roboto;
+  font-size: 1rem;
+  text-align: justify;
+  display: inline-block;
 }
 
 @media only screen and (min-width: 600px) {

@@ -132,21 +132,53 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 //Card Gallery
 
+const slidesComedyContainer = '#all-slides-comedy';
+const slidesRcgContainer = '#all-slides-rcg'
 
-const slidesContainer = document.getElementById('all-slides');
-const allSlides = document.querySelectorAll('.card-gallery-image');
-let currentIndex = 0;
-function moveSlideRight(){
-    
-    
+const allSlidesComedy = document.querySelectorAll('#comedy-img');
+const allSlidesRcg = document.querySelectorAll('#rcg-img');
+let currentIndexComedy = 0;
+let currentIndexRcg = 0;
+
+
+function moveSlideRight(allSlides, container){
+    let currentIndex
+    switch (container) {
+        case "#slides-comedy":
+            currentIndex = currentIndexComedy;
+            break;
+        case "#slides-rcg":
+            currentIndex = currentIndexRcg;
+            break
+        default:
+            currentIndex = 0;
+            break;
+    }
+
     if (currentIndex === allSlides.length-1){
         currentIndex = 1;
-        gsap.to('#all-slides', {duration: 1, x:currentIndex * -300})
-        gsap.set('#all-slides', {x:0});
+        gsap.to(container, {duration: 1, x:currentIndex * -275})
+        gsap.set(container, {x:0});
     } else {
         currentIndex = currentIndex + 1
-        gsap.to('#all-slides', {duration: 1, x:currentIndex * -300})
+        gsap.to(container, {duration: 1, x:currentIndex * -275})
+    }
+
+    switch (container) {
+        case "#slides-comedy":
+            currentIndexComedy = currentIndex;
+            break;
+        case "#slides-rcg":
+            currentIndexRcg = currentIndex;
+            break
+        default:
+            currentIndex = 0;
+            break;
     }
 }
 
-window.setInterval(moveSlideRight, 2000)
+
+window.setInterval(()=>{
+    moveSlideRight(allSlidesComedy, "#slides-comedy" );
+    moveSlideRight(allSlidesRcg, "#slides-rcg")
+}, 2000)
