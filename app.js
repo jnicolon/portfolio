@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger)
+
 //Nav Bar//
 
 const navbar = document.getElementById('nav-bar');
@@ -181,4 +183,52 @@ function moveSlideRight(allSlides, container){
 window.setInterval(()=>{
     moveSlideRight(allSlidesComedy, "#slides-comedy" );
     moveSlideRight(allSlidesRcg, "#slides-rcg")
-}, 2000)
+}, 2000);
+
+//Scroll Animations
+
+const leftContainer = gsap.utils.toArray('.left-container');
+const rightContainer = gsap.utils.toArray('.right-container');
+
+rightContainer.forEach( container =>{
+    gsap.from(container,{
+        scrollTrigger:{
+            trigger:container,
+            
+            start:"center bottom"
+        },
+        duration: 1.5,
+        opacity:0,
+        x:"50",
+        ease: "powe1.in"
+    })
+})
+
+
+leftContainer.forEach( container =>{
+    gsap.from(container,{
+        scrollTrigger:{
+            trigger:container,
+           
+            start:"center bottom"
+        },
+        duration: 1.5,
+        opacity:0,
+        x:"-50",
+        ease: "powe1.in"
+    })
+})
+
+
+gsap.from('#march-left-container',{
+    scrollTrigger:{
+        trigger:'#march',
+        // markers: true,
+        start:'top center',
+        end: "+=100",
+    },
+    duration: 2,
+    opacity:0,
+    x:"-50",
+    ease: "powe1.in"
+})

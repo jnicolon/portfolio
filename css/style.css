@@ -18,6 +18,14 @@
   background-color: #b65d87;
 }
 
+.month6 {
+  background-color: #38282c;
+}
+
+.month7 {
+  background-color: #f4d60d;
+}
+
 .nav-container {
   width: 100vw;
   height: 60px;
@@ -397,6 +405,7 @@
   text-transform: uppercase;
   color: white;
   font-size: 2.4rem;
+  margin-top: 30px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -750,6 +759,22 @@
           align-items: center;
   height: 100px;
   width: 100%;
+}
+
+.may-brands-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 * {

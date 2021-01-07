@@ -8,7 +8,7 @@ $color-june: #302231;
 $color-july: #b65d87;
 $color-august: #38282c;
 $color-november: #f4d60d;
-$color-devember: #2a2b39;
+$color-december: #2a2b39;
 $color-january2: #517ac0;
 $color-february2: #dfc7c3;
 
@@ -54,4 +54,10 @@ $text-paragraph: $font-openSans;
 }
 .month5 {
   background-color: $color-july;
+}
+.month6 {
+  background-color: $color-august;
+}
+.month7 {
+  background-color: $color-november;
 }

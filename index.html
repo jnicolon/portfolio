@@ -61,7 +61,7 @@
         </nav>
       </nav>
       <div class="content-container">
-        <section class="intro-container">
+        <section class="intro-container" id="intro">
           <div></div>
           <div class="intro-center-container">
             <h1 class="content-title">Juan Nicolon</h1>
@@ -167,11 +167,11 @@
           </div>
         </section>
         <section class="timeline-container">
-          <div class="month-container month1">
+          <div class="month-container month1" id="march">
             <div class="month-content-container">
               <h1 class="month-title">March 2020</h1>
               <div class="card-content-vertical-container">
-                <div class="card-vertical-1" id="card">
+                <div class="card-vertical-1 left-container">
                   <div class="card-background month2"></div>
                   <div class="card-vertical-container-1">
                     <div class="text-vertical-container-1">
@@ -202,7 +202,7 @@
                   </div>
                 </div>
                 <div class="card-square-vertical-container">
-                  <div class="card-square">
+                  <div class="card-square right-container">
                     <div class="card-background month2"></div>
                     <div class="card-square-container">
                       <div class="card-gallery-container">
@@ -250,7 +250,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="card-square">
+                  <div class="card-square right-container">
                     <div class="card-background month2"></div>
                     <div class="card-square-container">
                       <div class="text-container-square">
@@ -299,7 +299,7 @@
           <div class="month-container month2">
             <div class="month-content-container">
               <h1 class="month-title">April 2020</h1>
-              <div class="card-horizontal-1">
+              <div class="card-horizontal-1 right-container">
                 <div class="card-background month3"></div>
                 <div class="card-horizontal-container-1">
                   <div class="text-container-horizontal">
@@ -327,7 +327,7 @@
                   </div>
                 </div>
               </div>
-              <div class="card-horizontal-1">
+              <div class="card-horizontal-1 left-container">
                 <div class="card-background month3"></div>
                 <div class="card-horizontal-container-1">
                   <div class="photo-container-horizontal">
@@ -361,7 +361,7 @@
               <h1 class="month-title">May 2020</h1>
               <div class="card-content-vertical-container">
                 <div class="card-square-vertical-container">
-                  <div class="card-square">
+                  <div class="card-square left-container">
                     <div class="card-background month4"></div>
                     <div class="card-square-container">
                       <div class="card-gallery-container">
@@ -397,12 +397,12 @@
                       </div>
                     </div>
                   </div>
-                  <div class="card-square">
+                  <div class="card-square left-container">
                     <div class="card-background month4"></div>
                     <div class="card-square-container">
                       <div class="brands-container">
                         <h3 class="card-title brands-title month2">Stack</h3>
-                        <div class="brands-row-container">
+                        <div class="may-brands-container">
                           <img
                             class="brand-logo"
                             style="height: 70px"
@@ -415,18 +415,24 @@
                           />
                           <img
                             class="brand-logo"
+                            src="./imgs/logos/stack/sass-1.svg"
+                          />
+                        </div>
+                        <div class="may-brands-container">
+                          <img
+                            class="brand-logo"
+                            src="./imgs/logos/stack/javascript.svg"
+                          />
+                          <img
+                            class="brand-logo"
                             src="./imgs/logos/stack/gsap-greensock.svg"
                           />
                         </div>
-                        <img
-                          class="brand-logo"
-                          src="./imgs/logos/stack/javascript.svg"
-                        />
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="card-vertical-1" id="card">
+                <div class="card-vertical-1 right-container" id="card">
                   <div class="card-background month4"></div>
                   <div class="card-vertical-container-1">
                     <div class="text-vertical-container-1">
@@ -438,8 +444,8 @@
                         picks a funny curse for the user.
                         <br />
                         <br />
-                        It was made with vanilla javascript, html and css with
-                        the gsap framework for the animations.
+                        It was made with vanilla javascript, html, sass for css
+                        with the gsap framework for the animations.
                         <br />
                         <br />
                         To get the curse, there's a small mechanic of
@@ -453,12 +459,251 @@
                         change your curse (unless you clear local storage).
                       </p>
                       <div class="card-link-container">
-                        <h3 class="card-title link-title month2">
-                          Link to page
-                        </h3>
-                        <h3 class="card-title link-title month2">
-                          Link to repo
-                        </h3>
+                        <a href=""
+                          ><h3 class="card-title link-title month2">
+                            Link to page
+                          </h3></a
+                        >
+                        <a href="">
+                          <h3 class="card-title link-title month2">
+                            Link to code
+                          </h3>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="photo-vertical-container-1"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="month-container month4" id="march">
+            <div class="month-content-container">
+              <h1 class="month-title">June 2020</h1>
+              <div class="card-content-vertical-container">
+                <div class="card-vertical-1 left-container">
+                  <div class="card-background month5"></div>
+                  <div class="card-vertical-container-1">
+                    <div class="text-vertical-container-1">
+                      <h3 class="card-title month5" style="font-size: 23.5px">
+                        ZuckerMash
+                      </h3>
+                      <p class="card-txt">
+                        My first React project was a parody of FaceMash, Mark
+                        Zuckerberg's app made before Facebook but instead of
+                        rating college women on their looks, you rate pictures
+                        of Mark.
+                        <br />
+                        <br />
+                        It is made Create React App, functional components and
+                        react hooks, React Router for pagination and React
+                        Context api for state managment.
+
+                        <br />
+                        <br />
+                        Some funtionality includes:
+                        <br />
+                        - An engine to randomize images based on certain
+                        criteria like tags and previous images displayed.
+                        <br />
+                        - A voting system and a ranking page to display the most
+                        voted pictures.
+                        <br />
+                        - A memory system to go back to previous images.
+                      </p>
+                      <div class="card-link-container">
+                        <a href=""
+                          ><h3 class="card-title link-title month5">
+                            Link to page
+                          </h3></a
+                        >
+                        <a href="">
+                          <h3 class="card-title link-title month5">
+                            Link to code
+                          </h3>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-square-vertical-container">
+                  <div class="card-square right-container">
+                    <div class="card-background month5"></div>
+                    <div class="card-square-container">
+                      <div class="card-gallery-container">
+                        <div
+                          class="card-gallery-images-container"
+                          id="slides-zuck"
+                        >
+                          <img
+                            class="card-gallery-image"
+                            src="./imgs/comedy/comedy1.png"
+                            alt=""
+                            id="zuck-img"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-square right-container">
+                    <div class="card-background month5"></div>
+                    <div class="card-square-container">
+                      <div class="text-container-square">
+                        <div class="brands-container">
+                          <h3 class="card-title brands-title month5">Stack</h3>
+                          <div class="may-brands-container">
+                            <img
+                              class="brand-logo"
+                              style="height: 70px"
+                              src="./imgs/logos/stack/html-5.svg"
+                            />
+
+                            <img
+                              class="brand-logo"
+                              src="./imgs/logos/stack/css3.svg"
+                            />
+                          </div>
+                          <div class="may-brands-container">
+                            <img
+                              class="brand-logo"
+                              src="./imgs/logos/stack/javascript.svg"
+                            />
+                            <img
+                              class="brand-logo"
+                              src="./imgs/logos/stack/react.svg"
+                            />
+                            <img
+                              class="brand-logo"
+                              src="./imgs/logos/stack/react-router.svg"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="month-container month5">
+            <div class="month-content-container">
+              <h1 class="month-title">July 2020</h1>
+              <div class="card-content-vertical-container">
+                <div class="card-square-vertical-container">
+                  <div class="card-square left-container">
+                    <div class="card-background month6"></div>
+                    <div class="card-square-container">
+                      <div class="card-gallery-container">
+                        <div
+                          class="card-gallery-images-container"
+                          id="slides-rcg"
+                        >
+                          <img
+                            class="card-gallery-image"
+                            src="./imgs/random-curse-generator/rcg-1.png"
+                            alt=""
+                            id="rcg-img"
+                          />
+                          <img
+                            class="card-gallery-image"
+                            src="./imgs/random-curse-generator/rcg-2.png"
+                            alt=""
+                            id="rcg-img"
+                          />
+                          <img
+                            class="card-gallery-image"
+                            src="./imgs/random-curse-generator/rcg-3.png"
+                            alt=""
+                            id="rcg-img"
+                          />
+                          <img
+                            class="card-gallery-image"
+                            src="./imgs/random-curse-generator/rcg-4.png"
+                            alt=""
+                            id="rcg-img"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-square left-container">
+                    <div class="card-background month6"></div>
+                    <div class="card-square-container">
+                      <div class="brands-container">
+                        <h3 class="card-title brands-title month6">Stack</h3>
+                        <div class="may-brands-container">
+                          <img
+                            class="brand-logo"
+                            style="height: 70px"
+                            src="./imgs/logos/stack/html-5.svg"
+                          />
+
+                          <img
+                            class="brand-logo"
+                            src="./imgs/logos/stack/css3.svg"
+                          />
+                          <img
+                            class="brand-logo"
+                            src="./imgs/logos/stack/react.svg"
+                          />
+                        </div>
+                        <div class="may-brands-container">
+                          <img
+                            class="brand-logo"
+                            src="./imgs/logos/stack/javascript.svg"
+                          />
+                          <img
+                            class="brand-logo"
+                            src="./imgs/logos/stack/redux.svg"
+                          />
+                          <img
+                            class="brand-logo"
+                            src="./imgs/logos/stack/react-router.svg"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-vertical-1 right-container" id="card">
+                  <div class="card-background month6"></div>
+                  <div class="card-vertical-container-1">
+                    <div class="text-vertical-container-1">
+                      <h3 class="card-title month4" style="font-size: 17.5px">
+                        Medieval Personal Shopper
+                      </h3>
+                      <p class="card-txt">
+                        I heard a good project to have in your portfolio is an
+                        e-commerce site so to make it fun for myself, I made it
+                        a game based on the rpgs I grew up loving.
+                        <br />
+                        <br />
+                        Diferent heroes come in with a set ammount of money to
+                        spend and an enemy to fight.You have to buy stuff for
+                        them to beat their stats.
+                        <br />
+                        <br />
+                        For the fights I created a small engine with javascript
+                        classes and recursive functions that even accounts for
+                        spell use.
+                        <br />
+                        <br />
+                        The main two objectives were to learn React class
+                        components and React Redux for content managment. It
+                        also has a call to an api with redux thunk for data
+                        stored in contentful.
+                      </p>
+                      <div class="card-link-container">
+                        <a href=""
+                          ><h3 class="card-title link-title month6">
+                            Link to page
+                          </h3></a
+                        >
+                        <a href="">
+                          <h3 class="card-title link-title month6">
+                            Link to code
+                          </h3>
+                        </a>
                       </div>
                     </div>
                     <div class="photo-vertical-container-1"></div>
