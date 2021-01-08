@@ -665,8 +665,6 @@
 
 .card-gallery-images-container {
   position: absolute;
-  width: 20px;
-  height: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -677,8 +675,8 @@
 }
 
 .card-gallery-image {
-  width: 275px;
-  height: 275px;
+  width: 260px;
+  height: 260px;
 }
 
 .brands-container {

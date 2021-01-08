@@ -134,13 +134,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 //Card Gallery
 
-const slidesComedyContainer = '#all-slides-comedy';
-const slidesRcgContainer = '#all-slides-rcg'
-
 const allSlidesComedy = document.querySelectorAll('#comedy-img');
 const allSlidesRcg = document.querySelectorAll('#rcg-img');
+const allSlidesZuck = document.querySelectorAll('#zuck-img')
+const allSlidesItem = document.querySelectorAll('#item-img')
 let currentIndexComedy = 0;
 let currentIndexRcg = 0;
+let currentIndexZuck = 0;
+let currentIndexItem = 0;
 
 
 function moveSlideRight(allSlides, container){
@@ -152,6 +153,12 @@ function moveSlideRight(allSlides, container){
         case "#slides-rcg":
             currentIndex = currentIndexRcg;
             break
+        case "#slides-zuck":
+            currentIndex = currentIndexZuck;
+            break
+        case "#slides-item":
+            currentIndex = currentIndexItem;
+            break
         default:
             currentIndex = 0;
             break;
@@ -159,11 +166,11 @@ function moveSlideRight(allSlides, container){
 
     if (currentIndex === allSlides.length-1){
         currentIndex = 1;
-        gsap.to(container, {duration: 1, x:currentIndex * -275})
+        gsap.to(container, {duration: 1, x:currentIndex * -260})
         gsap.set(container, {x:0});
     } else {
         currentIndex = currentIndex + 1
-        gsap.to(container, {duration: 1, x:currentIndex * -275})
+        gsap.to(container, {duration: 1, x:currentIndex * -260})
     }
 
     switch (container) {
@@ -172,6 +179,12 @@ function moveSlideRight(allSlides, container){
             break;
         case "#slides-rcg":
             currentIndexRcg = currentIndex;
+            break
+        case "#slides-zuck":
+            currentIndexZuck = currentIndex;
+            break
+        case "#slides-item":
+            currentIndexItem = currentIndex;
             break
         default:
             currentIndex = 0;
@@ -183,7 +196,9 @@ function moveSlideRight(allSlides, container){
 window.setInterval(()=>{
     moveSlideRight(allSlidesComedy, "#slides-comedy" );
     moveSlideRight(allSlidesRcg, "#slides-rcg")
-}, 2000);
+    moveSlideRight(allSlidesZuck, "#slides-zuck")
+    moveSlideRight(allSlidesItem, "#slides-item")
+}, 3000);
 
 //Scroll Animations
 
