@@ -775,6 +775,28 @@
           align-items: center;
 }
 
+.suvival-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.survival-txt {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
 * {
   margin: 0px;
   padding: 0px;

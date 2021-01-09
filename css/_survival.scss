@@ -1,0 +1,12 @@
+.suvival-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.survival-txt {
+  color: white;
+  font-family: $font-poppins;
+  text-align: center;
+}

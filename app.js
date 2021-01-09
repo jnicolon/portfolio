@@ -247,3 +247,15 @@ gsap.from('#march-left-container',{
     x:"-50",
     ease: "powe1.in"
 })
+
+gsap.from('.survival-container', {
+    scrollTrigger:{
+        trigger:'.survival-container',
+        //markers: true,
+        start:'top bottom',
+        end: "+=100",
+    },
+    duration: 4,
+    opacity:0,
+    ease: "power1.in"
+})
