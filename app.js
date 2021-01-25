@@ -222,7 +222,7 @@ rightContainer.forEach((container) => {
 
       start: "center bottom",
     },
-    duration: 1.5,
+    duration: 1,
     opacity: 0,
     x: "50",
     ease: "powe1.in",
@@ -236,7 +236,7 @@ leftContainer.forEach((container) => {
 
       start: "center bottom",
     },
-    duration: 1.5,
+    duration: 1,
     opacity: 0,
     x: "-50",
     ease: "powe1.in",
@@ -250,7 +250,7 @@ gsap.from("#march-left-container", {
     start: "top center",
     end: "+=100",
   },
-  duration: 2,
+  duration: 1,
   opacity: 0,
   x: "-50",
   ease: "powe1.in",
@@ -263,7 +263,61 @@ gsap.from(".survival-container", {
     start: "top bottom",
     end: "+=100",
   },
-  duration: 4,
+  duration: 1,
   opacity: 0,
   ease: "power1.in",
+});
+
+
+//Scroll Links
+const projectContainer = document.querySelector('#projects');
+const aboutContainer = document.querySelector('#about');
+const topContainer = document.querySelector('#top')
+
+const projectsLink = document.querySelector('#projects-link');
+const aboutLink = document.querySelector('#about-link');
+const backToTopLink = document.querySelector('#back-to-top-link')
+const logoLink = document.querySelector('#logo')
+const downLink = document.querySelector('.down-container')
+
+function getOffset(el) {
+  const rect = el.getBoundingClientRect();
+  return {
+    left: rect.left + window.scrollX,
+    top: rect.top + window.scrollY
+  };
+};
+
+
+
+projectsLink.addEventListener('click', ()=>{
+  gsap.to(window, {duration: 1, scrollTo: getOffset(projectContainer).top})
+});
+
+
+aboutLink.addEventListener('click', ()=>{
+  gsap.to(window, {duration: 1, scrollTo: getOffset(aboutContainer).top})
+});
+
+backToTopLink.addEventListener('click', ()=>{
+  gsap.to(window, {duration: 1, scrollTo:getOffset(topContainer).top})
+});
+
+logoLink.addEventListener('click', ()=>{
+  gsap.to(window, {duration: 1, scrollTo:getOffset(topContainer).top})
+});
+
+downLink.addEventListener('click', ()=>{
+  gsap.to(window, {duration: 1, scrollTo: getOffset(projectContainer).top})
+});
+
+const downArrows = document.querySelectorAll('.down-arrow');
+
+downArrows.forEach(arrow=>{
+  const parentTop = getOffset(arrow.parentElement).top;
+  const scrollAmmount = parentTop + 920
+
+  arrow.addEventListener('click', ()=>{
+    gsap.to(window, {duration: 1, scrollTo:scrollAmmount})
+  })
 });
