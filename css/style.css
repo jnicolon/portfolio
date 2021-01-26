@@ -256,6 +256,7 @@
       -ms-flex-align: center;
           align-items: center;
   z-index: 1;
+  top: -50px;
 }
 
 .content-title {

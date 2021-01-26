@@ -57,6 +57,12 @@ const titleContainer = document.querySelector(".intro-container");
 let titleRect = contentTitle.getBoundingClientRect();
 let bottom = titleContainer.getBoundingClientRect().bottom;
 
+window.addEventListener("load", () => {
+  titleRect = contentTitle.getBoundingClientRect();
+  bottom = titleContainer.getBoundingClientRect().bottom;
+  changeCardBackgroundDimensions();
+});
+
 window.addEventListener("resize", () => {
   titleRect = contentTitle.getBoundingClientRect();
   bottom = titleContainer.getBoundingClientRect().bottom;
