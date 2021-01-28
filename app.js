@@ -92,7 +92,7 @@ window.addEventListener("resize", () => {
   titleRect = contentTitle.getBoundingClientRect();
   bottom = titleContainer.getBoundingClientRect().bottom;
   changeCardBackgroundDimensions();
-  phoneMenu.style.left = "-100vh";
+  phoneMenu.style.left = "-100vw";
 });
 window.addEventListener("scroll", () => {
   titleRect = contentTitle.getBoundingClientRect();
