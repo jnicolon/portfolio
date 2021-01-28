@@ -92,6 +92,7 @@ window.addEventListener("resize", () => {
   titleRect = contentTitle.getBoundingClientRect();
   bottom = titleContainer.getBoundingClientRect().bottom;
   changeCardBackgroundDimensions();
+  phoneMenu.style.left = "-100vh";
 });
 window.addEventListener("scroll", () => {
   titleRect = contentTitle.getBoundingClientRect();
@@ -304,11 +305,12 @@ const projectContainer = document.querySelector("#projects");
 const aboutContainer = document.querySelector("#about");
 const topContainer = document.querySelector("#top");
 
-const projectsLink = document.querySelector("#projects-link");
-const aboutLink = document.querySelector("#about-link");
+const projectsLink = document.querySelectorAll(".projects-link");
+const aboutLink = document.querySelectorAll(".about-link");
 const backToTopLink = document.querySelector("#back-to-top-link");
 const logoLink = document.querySelector("#logo");
 const downLink = document.querySelector(".down-container");
+const phoneLinks = document.querySelectorAll(".phone-link");
 
 function getOffset(el) {
   const rect = el.getBoundingClientRect();
@@ -318,14 +320,22 @@ function getOffset(el) {
   };
 }
 
-projectsLink.addEventListener("click", () => {
-  changePhoneMenuDisplay();
-  gsap.to(window, { duration: 1, scrollTo: getOffset(projectContainer).top });
+projectsLink.forEach((link) => {
+  link.addEventListener("click", () => {
+    gsap.to(window, { duration: 1, scrollTo: getOffset(projectContainer).top });
+  });
 });
 
-aboutLink.addEventListener("click", () => {
-  changePhoneMenuDisplay();
-  gsap.to(window, { duration: 1, scrollTo: getOffset(aboutContainer).top });
+aboutLink.forEach((link) => {
+  link.addEventListener("click", () => {
+    gsap.to(window, { duration: 1, scrollTo: getOffset(aboutContainer).top });
+  });
+});
+
+phoneLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    changePhoneMenuDisplay();
+  });
 });
 
 backToTopLink.addEventListener("click", () => {
