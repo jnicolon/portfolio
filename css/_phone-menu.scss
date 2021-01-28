@@ -1,0 +1,40 @@
+.phone-menu {
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 600;
+  font-family: $font-poppins;
+  padding: 40px;
+  transition: all 1s;
+  h1 {
+    font-size: 3rem;
+    border-bottom: 3px solid black;
+  }
+  ul {
+    margin: 50px 0px;
+    list-style: none;
+    height: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    li {
+      height: 50px;
+      text-align: center;
+    }
+  }
+}
+
+.close-menu {
+  position: absolute;
+  font-size: 1.5rem;
+  top: 20px;
+  left: 90vw;
+}

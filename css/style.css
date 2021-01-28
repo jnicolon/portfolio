@@ -382,7 +382,6 @@
 
 .month-container {
   position: relative;
-  height: 100vh;
   min-height: 920px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -815,6 +814,67 @@
   color: white;
   font-family: "Poppins", sans-serif;
   text-align: center;
+}
+
+.phone-menu {
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 600;
+  font-family: "Poppins", sans-serif;
+  padding: 40px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.phone-menu h1 {
+  font-size: 3rem;
+  border-bottom: 3px solid black;
+}
+
+.phone-menu ul {
+  margin: 50px 0px;
+  list-style: none;
+  height: 250px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.phone-menu ul li {
+  height: 50px;
+  text-align: center;
+}
+
+.close-menu {
+  position: absolute;
+  font-size: 1.5rem;
+  top: 20px;
+  left: 90vw;
 }
 
 * {

@@ -1,5 +1,30 @@
 gsap.registerPlugin(ScrollTrigger);
 
+//display phone menu
+
+let phoneMenuDisplay = false;
+const phoneMenu = document.querySelector(".phone-menu");
+const phoneMenuBtn = document.querySelector(".menu-mobile-btn");
+const closeMenu = document.querySelector(".close-menu");
+
+const changePhoneMenuDisplay = () => {
+  if (phoneMenuDisplay) {
+    phoneMenuDisplay = false;
+    phoneMenu.style.left = "-100vh";
+  } else {
+    phoneMenuDisplay = true;
+    phoneMenu.style.left = "0";
+  }
+};
+
+phoneMenuBtn.addEventListener("click", () => {
+  changePhoneMenuDisplay();
+});
+
+closeMenu.addEventListener("click", () => {
+  changePhoneMenuDisplay();
+});
+
 //Nav Bar//
 
 const navbar = document.getElementById("nav-bar");
@@ -294,10 +319,12 @@ function getOffset(el) {
 }
 
 projectsLink.addEventListener("click", () => {
+  changePhoneMenuDisplay();
   gsap.to(window, { duration: 1, scrollTo: getOffset(projectContainer).top });
 });
 
 aboutLink.addEventListener("click", () => {
+  changePhoneMenuDisplay();
   gsap.to(window, { duration: 1, scrollTo: getOffset(aboutContainer).top });
 });
 
@@ -315,7 +342,6 @@ downLink.addEventListener("click", () => {
 
 const nodeArrows = document.querySelectorAll(".arrow-click");
 const downArrows = Array.from(nodeArrows);
-console.log(downArrows);
 
 downArrows.forEach((arrow) => {
   const scrollAmmount = getOffset(arrow.parentElement.nextElementSibling).top;
