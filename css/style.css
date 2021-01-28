@@ -382,6 +382,7 @@
 
 .month-container {
   position: relative;
+  height: 100vh;
   min-height: 920px;
   display: -webkit-box;
   display: -ms-flexbox;

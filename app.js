@@ -274,56 +274,53 @@ gsap.from(".survival-container", {
   ease: "power1.in",
 });
 
-
 //Scroll Links
-const projectContainer = document.querySelector('#projects');
-const aboutContainer = document.querySelector('#about');
-const topContainer = document.querySelector('#top')
+const projectContainer = document.querySelector("#projects");
+const aboutContainer = document.querySelector("#about");
+const topContainer = document.querySelector("#top");
 
-const projectsLink = document.querySelector('#projects-link');
-const aboutLink = document.querySelector('#about-link');
-const backToTopLink = document.querySelector('#back-to-top-link')
-const logoLink = document.querySelector('#logo')
-const downLink = document.querySelector('.down-container')
+const projectsLink = document.querySelector("#projects-link");
+const aboutLink = document.querySelector("#about-link");
+const backToTopLink = document.querySelector("#back-to-top-link");
+const logoLink = document.querySelector("#logo");
+const downLink = document.querySelector(".down-container");
 
 function getOffset(el) {
   const rect = el.getBoundingClientRect();
   return {
     left: rect.left + window.scrollX,
-    top: rect.top + window.scrollY
+    top: rect.top + window.scrollY,
   };
-};
+}
 
-
-
-projectsLink.addEventListener('click', ()=>{
-  gsap.to(window, {duration: 1, scrollTo: getOffset(projectContainer).top})
+projectsLink.addEventListener("click", () => {
+  gsap.to(window, { duration: 1, scrollTo: getOffset(projectContainer).top });
 });
 
-
-aboutLink.addEventListener('click', ()=>{
-  gsap.to(window, {duration: 1, scrollTo: getOffset(aboutContainer).top})
+aboutLink.addEventListener("click", () => {
+  gsap.to(window, { duration: 1, scrollTo: getOffset(aboutContainer).top });
 });
 
-backToTopLink.addEventListener('click', ()=>{
-  gsap.to(window, {duration: 1, scrollTo:getOffset(topContainer).top})
+backToTopLink.addEventListener("click", () => {
+  gsap.to(window, { duration: 1, scrollTo: getOffset(topContainer).top });
 });
 
-logoLink.addEventListener('click', ()=>{
-  gsap.to(window, {duration: 1, scrollTo:getOffset(topContainer).top})
+logoLink.addEventListener("click", () => {
+  gsap.to(window, { duration: 1, scrollTo: getOffset(topContainer).top });
 });
 
-downLink.addEventListener('click', ()=>{
-  gsap.to(window, {duration: 1, scrollTo: getOffset(projectContainer).top})
+downLink.addEventListener("click", () => {
+  gsap.to(window, { duration: 1, scrollTo: getOffset(projectContainer).top });
 });
 
-const downArrows = document.querySelectorAll('.down-arrow');
+const nodeArrows = document.querySelectorAll(".arrow-click");
+const downArrows = Array.from(nodeArrows);
+console.log(downArrows);
 
-downArrows.forEach(arrow=>{
-  const parentTop = getOffset(arrow.parentElement).top;
-  const scrollAmmount = parentTop + 920
+downArrows.forEach((arrow) => {
+  const scrollAmmount = getOffset(arrow.parentElement.nextElementSibling).top;
 
-  arrow.addEventListener('click', ()=>{
-    gsap.to(window, {duration: 1, scrollTo:scrollAmmount})
-  })
+  arrow.addEventListener("click", () => {
+    gsap.to(window, { duration: 1, scrollTo: scrollAmmount });
+  });
 });
