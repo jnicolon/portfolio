@@ -23,6 +23,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
   justify-content: space-around;
   align-items: center;
 }
@@ -61,16 +62,12 @@
   justify-content: space-evenly;
 }
 
-@media only screen and (min-width: 600px) {
-  .month-container {
-    height: 100%;
-  }
-
-  #about {
-    height: 100%;
-  }
-
+@media only screen and (max-width: 600px) {
   .month-title {
     font-size: 3rem;
+  }
+  #about {
+    height: 100%;
+    background-color: black;
   }
 }

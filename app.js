@@ -351,7 +351,10 @@ projectsLink.forEach((link) => {
 
 aboutLink.forEach((link) => {
   link.addEventListener("click", () => {
-    gsap.to(window, { duration: 1, scrollTo: getOffset(aboutContainer).top });
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: getOffset(aboutContainer).top - 50,
+    });
   });
 });
 
