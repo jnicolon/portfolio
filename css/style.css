@@ -475,6 +475,9 @@
   .month-container {
     height: 100%;
   }
+  #about {
+    height: 100%;
+  }
   .month-title {
     font-size: 3rem;
   }
