@@ -409,13 +409,30 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+}
+
+.month-horizontal-container {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .month-title {
@@ -423,8 +440,27 @@
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   color: white;
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   margin-top: 30px;
+}
+
+.month-sub-title {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.2rem;
+  margin: 0px 0px 0px 0px;
+}
+
+.month-description {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  text-transform: none;
+  color: white;
+  font-size: 1rem;
+  margin-top: 10px;
+  width: 500px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -432,7 +468,7 @@
     height: 100vh;
   }
   .month-title {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 
@@ -469,7 +505,7 @@
 .card-title {
   color: white;
   font-family: "Poppins", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -479,9 +515,30 @@
 
 .card-txt {
   font-family: "Roboto", sans-serif;
-  font-size: 15px;
-  text-align: justify;
+  font-size: 1.2rem;
+  text-align: left;
   display: inline-block;
+}
+
+.link-title {
+  font-size: 15px;
+}
+
+.card-link-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 250px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -621,6 +678,18 @@
   margin-bottom: 15px;
   padding: 0px 20px;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 @media only screen and (min-width: 600px) {
@@ -754,28 +823,6 @@
 
 #rpg-creator {
   position: relative;
-}
-
-.link-title {
-  font-size: 15px;
-}
-
-.card-link-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100px;
-  width: 100%;
 }
 
 .may-brands-container {

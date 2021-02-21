@@ -39,7 +39,18 @@ function displayNavBar() {
   }
 }
 
-window.addEventListener("scroll", displayNavBar);
+function displayTilde() {
+  if (window.pageYOffset > 800) {
+    tilde.style.display = "none";
+  } else {
+    tilde.style.display = "block";
+  }
+}
+
+window.addEventListener("scroll", () => {
+  displayNavBar();
+  displayTilde();
+});
 
 //Subtitle//
 

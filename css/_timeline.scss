@@ -13,9 +13,18 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   height: 100%;
+}
+
+.month-horizontal-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .month-title {
@@ -23,8 +32,27 @@
   font-family: $font-poppins;
   text-transform: uppercase;
   color: white;
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   margin-top: 30px;
+}
+
+.month-sub-title {
+  text-align: center;
+  font-family: $font-poppins;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.2rem;
+  margin: 0px 0px 0px 0px;
+}
+
+.month-description {
+  text-align: center;
+  font-family: $font-poppins;
+  text-transform: none;
+  color: white;
+  font-size: 1rem;
+  margin-top: 10px;
+  width: 500px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -33,6 +61,6 @@
   }
 
   .month-title {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }

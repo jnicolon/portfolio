@@ -25,7 +25,7 @@
 .card-title {
   color: white;
   font-family: $font-poppins;
-  font-size: 1.5rem;
+  font-size: 1rem;
   width: fit-content;
   padding: 0px 5px;
   margin-bottom: 15px;
@@ -33,9 +33,22 @@
 
 .card-txt {
   font-family: $font-roboto;
-  font-size: 15px;
-  text-align: justify;
+  font-size: 1.2rem;
+  text-align: left;
   display: inline-block;
+}
+
+.link-title {
+  font-size: 15px;
+}
+
+.card-link-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 250px;
 }
 
 @media only screen and (min-width: 600px) {
