@@ -464,6 +464,7 @@
 }
 
 #about {
+  padding-top: 30px;
   height: 100vh;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
