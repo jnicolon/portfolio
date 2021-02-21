@@ -382,7 +382,7 @@
 
 .month-container {
   position: relative;
-  min-height: 920px;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -415,7 +415,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
+  padding-bottom: 20px;
 }
 
 .month-horizontal-container {
@@ -441,7 +441,7 @@
   text-transform: uppercase;
   color: white;
   font-size: 2.5rem;
-  margin-top: 30px;
+  margin-top: 0px;
 }
 
 .month-sub-title {
@@ -463,9 +463,16 @@
   width: 500px;
 }
 
+#about {
+  height: 100vh;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
 @media only screen and (min-width: 600px) {
   .month-container {
-    height: 100vh;
+    height: 100%;
   }
   .month-title {
     font-size: 3rem;
@@ -515,7 +522,7 @@
 
 .card-txt {
   font-family: "Roboto", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-align: left;
   display: inline-block;
 }
@@ -627,12 +634,24 @@
 
 .card-square-container {
   position: relative;
-  width: 100%;
+  width: 300px;
   height: 100%;
   background-color: white;
   z-index: 5;
   padding: 20px;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .text-container-square {
@@ -647,7 +666,7 @@
   height: 550px;
   position: relative;
   background-color: white;
-  margin-bottom: 40px;
+  margin: 20px 0px;
 }
 
 .card-horizontal-container-1 {
@@ -673,7 +692,7 @@
 }
 
 .text-container-horizontal {
-  width: 100%;
+  width: 400px;
   height: 100%;
   margin-bottom: 15px;
   padding: 0px 20px;
@@ -688,8 +707,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media only screen and (min-width: 600px) {
@@ -745,8 +765,8 @@
 
 .card-gallery-container {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 260px;
+  height: 260px;
   background-color: #d67f0e;
   overflow: hidden;
 }

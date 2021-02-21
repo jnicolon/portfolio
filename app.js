@@ -185,11 +185,13 @@ const allSlidesRcg = document.querySelectorAll("#rcg-img");
 const allSlidesZuck = document.querySelectorAll("#zuck-img");
 const allSlidesItem = document.querySelectorAll("#item-img");
 const allSlidesOcc = document.querySelectorAll("#occ-img");
+const allSlidesSecrets = document.querySelectorAll("#secrets-img");
 let currentIndexComedy = 0;
 let currentIndexRcg = 0;
 let currentIndexZuck = 0;
 let currentIndexItem = 0;
 let currentIndexOcc = 0;
+let currentIndexSecrets = 0;
 
 function moveSlideRight(allSlides, container) {
   let currentIndex;
@@ -208,6 +210,9 @@ function moveSlideRight(allSlides, container) {
       break;
     case "#slides-occ":
       currentIndex = currentIndexOcc;
+      break;
+    case "#slides-secrets":
+      currentIndex = currentIndexSecrets;
       break;
     default:
       currentIndex = 0;
@@ -239,6 +244,9 @@ function moveSlideRight(allSlides, container) {
     case "#slides-occ":
       currentIndexOcc = currentIndex;
       break;
+    case "#slides-secrets":
+      currentIndexSecrets = currentIndex;
+      break;
     default:
       currentIndex = 0;
       break;
@@ -251,6 +259,7 @@ window.setInterval(() => {
   moveSlideRight(allSlidesZuck, "#slides-zuck");
   moveSlideRight(allSlidesItem, "#slides-item");
   moveSlideRight(allSlidesOcc, "#slides-occ");
+  moveSlideRight(allSlidesSecrets, "#slides-secrets");
 }, 3000);
 
 //Scroll Animations
@@ -333,7 +342,10 @@ function getOffset(el) {
 
 projectsLink.forEach((link) => {
   link.addEventListener("click", () => {
-    gsap.to(window, { duration: 1, scrollTo: getOffset(projectContainer).top });
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: getOffset(projectContainer).top - 60,
+    });
   });
 });
 
@@ -358,7 +370,10 @@ logoLink.addEventListener("click", () => {
 });
 
 downLink.addEventListener("click", () => {
-  gsap.to(window, { duration: 1, scrollTo: getOffset(projectContainer).top });
+  gsap.to(window, {
+    duration: 1,
+    scrollTo: getOffset(projectContainer).top - 60,
+  });
 });
 
 const nodeArrows = document.querySelectorAll(".arrow-click");

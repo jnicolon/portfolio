@@ -1,6 +1,6 @@
 .month-container {
   position: relative;
-  min-height: 920px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -15,7 +15,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 100%;
+  padding-bottom: 20px;
 }
 
 .month-horizontal-container {
@@ -33,7 +33,7 @@
   text-transform: uppercase;
   color: white;
   font-size: 2.5rem;
-  margin-top: 30px;
+  margin-top: 0px;
 }
 
 .month-sub-title {
@@ -55,9 +55,14 @@
   width: 500px;
 }
 
+#about {
+  height: 100vh;
+  justify-content: space-evenly;
+}
+
 @media only screen and (min-width: 600px) {
   .month-container {
-    height: 100vh;
+    height: 100%;
   }
 
   .month-title {
