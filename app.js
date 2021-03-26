@@ -186,12 +186,14 @@ const allSlidesZuck = document.querySelectorAll("#zuck-img");
 const allSlidesItem = document.querySelectorAll("#item-img");
 const allSlidesOcc = document.querySelectorAll("#occ-img");
 const allSlidesSecrets = document.querySelectorAll("#secrets-img");
+const allSlidesComedians = document.querySelectorAll("#comedians-img");
 let currentIndexComedy = 0;
 let currentIndexRcg = 0;
 let currentIndexZuck = 0;
 let currentIndexItem = 0;
 let currentIndexOcc = 0;
 let currentIndexSecrets = 0;
+let currentIndexComedians = 0;
 
 function moveSlideRight(allSlides, container) {
   let currentIndex;
@@ -213,6 +215,9 @@ function moveSlideRight(allSlides, container) {
       break;
     case "#slides-secrets":
       currentIndex = currentIndexSecrets;
+      break;
+    case "#slides-comedians":
+      currentIndex = currentIndexComedians;
       break;
     default:
       currentIndex = 0;
@@ -247,6 +252,9 @@ function moveSlideRight(allSlides, container) {
     case "#slides-secrets":
       currentIndexSecrets = currentIndex;
       break;
+    case "#slides-comedians":
+      currentIndexComedians = currentIndex;
+      break;
     default:
       currentIndex = 0;
       break;
@@ -260,6 +268,7 @@ window.setInterval(() => {
   moveSlideRight(allSlidesItem, "#slides-item");
   moveSlideRight(allSlidesOcc, "#slides-occ");
   moveSlideRight(allSlidesSecrets, "#slides-secrets");
+  moveSlideRight(allSlidesComedians, "#slides-comedians");
 }, 3000);
 
 //Scroll Animations
