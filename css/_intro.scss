@@ -63,13 +63,18 @@
   @include flex-row;
   position: relative;
   top: -10px;
+  justify-content: flex-end;
 }
 
 .svg-logos {
   fill: $text-color;
   width: 30px;
   height: 30px;
-  margin: 0px 3px;
+  margin: 0px 10px;
+}
+.svg-mail {
+  width: 35px;
+  height: 35px;
 }
 
 .intro-down-container {

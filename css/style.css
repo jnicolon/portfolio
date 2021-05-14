@@ -318,13 +318,21 @@
           flex-direction: row;
   position: relative;
   top: -10px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .svg-logos {
   fill: #e9e9e9;
   width: 30px;
   height: 30px;
-  margin: 0px 3px;
+  margin: 0px 10px;
+}
+
+.svg-mail {
+  width: 35px;
+  height: 35px;
 }
 
 .intro-down-container {
